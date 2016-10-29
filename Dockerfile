@@ -59,7 +59,6 @@ RUN apt-get update && \
     wget  https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz && \
     tar zxvf docker-latest.tgz && \
     mv docker/docker /usr/local/bin/ && \
-    which inspekt || pip install inspektor && \
     echo "Cleanup" && \
     apt-get clean && \
     rm -rf \

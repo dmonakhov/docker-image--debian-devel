@@ -39,7 +39,8 @@ RUN apt-get update && \
 	    emacs-nox \
 	    pigz \
 	    libzip2 \
-	    pxz && \
+	    pxz \
+	    wget && \
     ln -f /usr/bin/pigz  /bin/gzip && \
     ln -f /usr/bin/pigz  /usr/bin/gzip && \
     echo install kernel-devel packages && \

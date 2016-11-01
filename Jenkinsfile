@@ -13,7 +13,7 @@ node () {
     stage ('Build image') {
 	deleteDir();
 	checkout scm;
-	def img = docker.build(full_name + ':${BUILD_TAG}');
+	def img = docker.build(full_name + ':${BUILD_TAG}', '--no-cache=true --pull=true .');
     }
     stage ('Push image to registry') {
 	docker.image(full_name + ':${BUILD_TAG}').push('latest')

@@ -65,7 +65,6 @@ RUN apt-get update && \
 	    libelf-dev \
 	    libnuma-dev \
 	    liblzma-dev && \
-
     echo Install docker files && \
     mkdir /tmp/BLD && \
     cd /tmp/BLD && \

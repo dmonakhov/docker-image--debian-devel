@@ -46,15 +46,26 @@ RUN apt-get update && \
     ln -f /usr/bin/pigz  /usr/bin/gzip && \
     echo install kernel-devel packages && \
     apt-get install -y --no-install-recommends \
-	    build-essential \
+            autoconf \
+            automake \
+            bc \
+            build-essential \
+            curl \
+            gettext \
+            git \
+            libtool \
+            libtool-bin \
+            pkg-config \
+            pigz \
+            uuid-dev  \
 	    guilt \
-	    bc \
 	    flex \
 	    bison \
 	    libc6-dev \
 	    libelf-dev \
 	    libnuma-dev \
 	    liblzma-dev && \
+
     echo Install docker files && \
     mkdir /tmp/BLD && \
     cd /tmp/BLD && \
